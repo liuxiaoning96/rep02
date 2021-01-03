@@ -41,6 +41,7 @@ $('#form_login').submit(function (e) {
         data: $(this).serialize(),
         success: function (res) {
             if (res.status !== 0) {
+                //return加上,后续不跳转执行
                 return layer.msg('登录失败!')
             }
             layer.msg('登录成功')
